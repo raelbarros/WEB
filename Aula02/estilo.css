@@ -1,0 +1,20 @@
+
+h1{
+	font-family:"arial";
+	border-style:solid;
+	border-color:#00FF00;
+}
+		
+.titulo{
+	color:red;
+}
+		
+#meu_titulo{
+	font-size:100px;
+}
+		
+body{
+	background-color: #68838B;
+	background-image: url("Peppa_Pig.png");
+}
+	
