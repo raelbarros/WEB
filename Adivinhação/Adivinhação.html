@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adivinhação</title>
+</head>
+<body background="http://imguol.com/blogdojuca/1/files/2014/09/IMG_2358.jpg">
+
+<body>
+    <br>
+    <center style="background-color: #f1f1f1"><h1>Jogo da Advinhação</h1></center>
+    <br>
+    <br>
+    <center>
+        <div style="background-color: #f1f1f1" id="qtdTentativa"></div>
+        <br>
+        <input type="number" id="numero" max="200">
+        <input type="button" onclick="clicou();" value="Tentar">
+        <br>
+        <br>
+        <div style="background-color: #f1f1f1" id="textDiv"></div>
+        <br>
+        <input type="button" value="Jogar Novamente" onclick="document.location.reload(true)">
+    </center>
+
+
+	<script type="text/javascript">
+        var win = false;
+        var inputNum = document.getElementById('numero');
+		
+        inputNum.onkeypress = function (e) {
+            if (e.charCode == 13)
+                clicou();
+        }
+		
+        var qtdTentativa = document.getElementById('qtdTentativa');
+        var alvo = parseInt(Math.random() * 200);
+        var tentativa = 1;
+
+        function clicou() {
+            var numDigitado = parseInt(inputNum.value);
+            var msgUsuario = document.getElementById('textDiv');
+
+            if (tentativa <= 20 && !win) {
+                qtdTentativa.innerText = 'Tentativa No. ' + tentativa + ' de 20.';
+                tentativa++;
+            } else if (tentativa > 20 && !win) {
+                qtdTentativa.innerText = 'Infelizmente você perdeu! Meu número foi ' + alvo + '.';
+                msgUsuario.textContent = '';
+                return;
+            } else if (win)
+                return;
+
+            if (numDigitado > 200 || isNaN(numDigitado))
+                alert('Tente um numero entre 0 e 200!');
+            else if (numDigitado > alvo)
+                msgUsuario.textContent = 'O meu número é menor. Tente de novo.';
+            else if (numDigitado < alvo)
+                msgUsuario.textContent = 'O meu número é maior. Tente de novo.';
+            else if (numDigitado == alvo) {
+                msgUsuario.textContent = 'Parabéns, você acertou meu número em ' + (--tentativa) + ' tentativa(s)!';
+                qtdTentativa.innerText = '';
+                win = true;
+                if (tentativa == 1)
+                    msgUsuario.innerHTML += '<br> <strong>Que sorte!!</strong>';
+                else if (tentativa > 1 && tentativa <= 10)
+                    msgUsuario.innerHTML += '<br> <strong>Muito bem!!</strong>';
+            }
+        }
+	</script>
+</body>
+</html>
