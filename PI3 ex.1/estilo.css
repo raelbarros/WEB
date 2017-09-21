@@ -1,0 +1,174 @@
+body{
+	background: #f3f3f3;
+	font-family: Arial, sans-serif;
+}
+
+p{
+	text-align: justify;
+	text-indent: 50px;
+}
+
+
+/* Formatacao da interface */
+#interface{
+	width: 1000px;
+	background: #fff;
+	margin: auto auto 0px auto;
+	padding: 15px;
+	border-top: 1px solid black;
+}
+
+
+/* Formatacao das imagens */
+figure.foto_txt{
+	width: 450px;
+	float: left;
+	border: 3px solid white;
+	box-shadow: 1px 1px 3px black;
+}
+figure.foto_txt img{
+	width: 100%;
+	height:100%
+}
+
+
+/* Formatacao do cabecalho */
+#cabecalho{
+	max-width:960px;
+	margin:0 auto;
+	background: #fff;
+	padding: 32px;
+	border-bottom: 1px solid black;
+}
+
+header{
+	background: #fff;
+	height: 150px;
+	padding: 4px;	
+}
+
+header img{
+	width: 450px;
+	height: 150px;
+	margin: 0px 270px 0px 250px;
+}	
+
+header h1{
+	text-transform: uppercase;
+	text-align: center;
+	color: #000;
+	line-height: 50px;	
+}
+
+
+/* Formatacao do menu */
+.main_menu{
+	padding: 5px 0 5px 0;
+	text-align: center;
+	background: #010101;
+	border-radius: 8px;
+}
+
+.main_menu ul{
+	list-style: none;
+	margin-top: 15px;
+}
+
+.main_menu li{
+	display:inline;
+	padding: 10px 0 10px;
+	font-size: 16px;
+	transition: background 1s;
+}
+
+.main_menu a{
+	text-decoration:none;
+	color: #fff;
+	padding:8px;
+	font-variant: small-caps;
+}
+
+.main_menu li:hover{
+	background: #D3D3D3;
+}
+
+
+/* Formatacao do section */
+section#corpo{
+	display: block;	
+	width: 600px;
+	float: left;
+	padding: 15px;
+	border-right: 1px solid black;
+}
+
+section#corpo h3{
+	padding: 5px;
+	text-align: center;
+}
+
+
+/* Formatacao da barra lateral*/
+aside#lateral{
+	display: block;
+	width: 350px;
+	float: right;
+	border-radius: 5px;
+	background: #010101;
+}
+
+aside#lateral ul{
+	list-style: none;
+}
+
+aside#lateral li{
+	color: #fff;
+	font: 16px;
+	font-variant: small-caps;
+	transition: background 1s;
+}
+
+aside#lateral li a{
+	display:block;
+	color: #fff;
+	text-decoration: none;
+	font-variant: small-caps;
+	padding: 5px;
+}
+
+aside#lateral li:hover{
+	background: #D3D3D3;
+}
+
+aside#lateral h1{
+	text-align: center;
+	color: #fff;
+	font-variant: small-caps;
+} 
+
+/* formatacao da tabela */
+table#tabela{
+	border: 1px solid black;
+	border-spacing: 0px;
+	margin-left: 150px;	
+}
+table#tabela td{
+	border: 1px solid black;
+	padding: 5px;
+	text-align: center;	
+}
+
+table#tabela a{
+	text-decoration: none;
+	color: #000;
+}
+
+/* Formatacao do rodape */
+footer#rodape{
+	border-top: 1px dashed #606060;
+	clear: both;
+}
+
+footer#rodape p{
+	text-align: center;	
+}
