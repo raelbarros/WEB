@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Calculadora</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script src="estilo.css"></script>
+	<script src="calculadora.js"></script>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="calculadora.html">Trabalho JavaScript</a></li>
+				<li><a href="calculadora.html">Calculadora</a></li>
+				<li><a href="validacao.html">Validação</a></li>
+				<li><a href="tabuada.html">Tabuada</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="corpo">
+				<div class="col-md-12" style="text-align:center">
+					<h3>Calculadora</h3>
+
+					<input type="text" id="campo1" size="5">
+					<input type="text" id="campo2" size="5"> =
+					<input type="text" id="resultado" size="5">
+
+					<br>
+					<br>
+
+					<button onclick="soma();">Soma</button>
+					<button onclick="subtração();">Subtração</button>
+					<button onclick="multiplicacao();">Multiplicação</button>
+					<button onclick="divisao();">Divisão</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
